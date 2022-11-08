@@ -50,52 +50,17 @@ ordenProfe()
 
 // Ordenado por comunication, profesor y student -------------------------------------------------
 
-const data2 = {
-    Antonio: {
-        classification: 'comunication',
-        age: 40
-    },
-    Nicola: {
-        classification: 'profesor',
-        age: 34
-    },
-    Gracia: {
-        classification: 'profesor',
-        age: 37
-    },
-    Oscar: {
-        classification: 'student',
-        age: 35
-    },
-    Nico: {
-        classification: 'profesor',
-        age: 29
-    },
-    Lufi: {
-        classification: 'student',
-        age: 26
-    },
-    Maria: {
-        classification: 'comunication',
-        age: 28
-    },
-    Pablo: {
-        classification: 'student',
-        age: 36
-    }
-}
-
 function ordenComunicacion() {
     let newData2 = {}
-    Object.keys(data2).sort((a, b) => {
-        if (data2[a].classification > data2[b].classification) {
+    Object.keys(data).sort((a, b) => {
+        if (data[a].classification > data[b].classification) {
             return 1
-        } else if (data2[a].classification < data2[b].classification) {
+        } else if (data[a].classification < data[b].classification) {
             return -1
         }
         return 0
     }).forEach(el => {
-        newData2[el] = data2[el]
+        newData2[el] = data[el]
     })
     console.table(newData2)
 }
@@ -105,45 +70,10 @@ ordenComunicacion()
 
 // Ordenado por edad --------------------------------------------------------------------------
 
-const data3 = {
-    Antonio: {
-        classification: 'comunication',
-        age: 40
-    },
-    Nicola: {
-        classification: 'profesor',
-        age: 34
-    },
-    Gracia: {
-        classification: 'profesor',
-        age: 37
-    },
-    Oscar: {
-        classification: 'student',
-        age: 35
-    },
-    Nico: {
-        classification: 'profesor',
-        age: 29
-    },
-    Lufi: {
-        classification: 'student',
-        age: 26
-    },
-    Maria: {
-        classification: 'comunication',
-        age: 28
-    },
-    Pablo: {
-        classification: 'student',
-        age: 36
-    }
-}
-
 function ordenEdad() {
     let newData3 = {};
     Object.keys(data).sort((a, b) => {
-        return data3[b].age - data3[a].age
+        return data[b].age - data[a].age
     }).forEach(el => newData3[el] = data[el])
     console.table(newData3)
 }
